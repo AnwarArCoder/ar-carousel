@@ -1,0 +1,101 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Rajdhani', sans-serif;
+	color: #1A3D7D;
+}
+.ar-carousel{
+    width: 600px;
+	height: 300px;
+    margin: 100px auto;
+	position: relative;
+}
+.ar-carousel .ar-stage-outer .ar-stage,
+.ar-carousel .ar-stage-outer{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.ar-carousel .ar-stage-outer .ar-stage .ar-item{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s;
+    background-color: #DDD;
+}
+.ar-carousel .ar-stage-outer .ar-stage .ar-item.active{
+	opacity: 1;
+}
+.ar-carousel .number-of-ar-item{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #13ADE5;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFF;
+}
+.ar-carousel .ar-nav{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+	width: 100%
+}
+.ar-carousel .ar-nav .ar-prev,
+.ar-carousel .ar-nav .ar-next{
+    display: inline-block;
+    background-color: #13ADE5;
+    color: #FFF;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 3px;
+	position: absolute;
+	cursor: pointer;
+}
+.ar-carousel .ar-nav .ar-prev.disabled,
+.ar-carousel .ar-nav .ar-next.disabled{
+	opacity: 0.5;
+	cursor: no-drop;
+}
+.ar-carousel .ar-nav .ar-prev{
+	left: 10px;
+}
+.ar-carousel .ar-nav .ar-next{
+	right: 10px;
+}
+.ar-carousel .ar-dots ul{
+    list-style: none;
+	line-height: 1;
+	margin-top: 30px;
+	text-align: center;
+}
+.ar-carousel .ar-dots ul li.dot{
+    background-color: #DDD;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.ar-carousel .ar-dots ul li.dot.active,
+.ar-carousel .ar-dots ul li.dot:hover{
+    background-color: #13ADE5;
+	color: #fff;
+}
